@@ -7,18 +7,18 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="back">
   <ion-grid *ngIf="contact">
     <ion-row>
       <ion-thumbnail>
-        <img [src]="contact.image" alt="">
+        <img [src]="contact.image" alt="" />
       </ion-thumbnail>
     </ion-row>
     <ion-row>
       <ion-title id="contact-name">{{ contact.name }}</ion-title>
     </ion-row>
     <ion-row>
-      <ion-card>
+      <ion-card class="border">
         <ion-item>
           <ion-card-header>
             <ion-card-title>E-mail</ion-card-title>
@@ -32,7 +32,10 @@
           </ion-card-header>
         </ion-item>
       </ion-card>
-      <ion-button color="dark" (click)="goToRoute('home')">Voltar para Home</ion-button>
     </ion-row>
+    <div class="center">
+      <ion-button (click)="goToRoute('home')">Voltar para Home</ion-button>
+    </div>
   </ion-grid>
+
 </ion-content>
